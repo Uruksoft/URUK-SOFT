@@ -3,13 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URUK SOFT | حلول تقنية ذكية</title>
+    <title>URUK SOFT | حلول تقنية ذكية - مرتضى حسين</title>
+    <meta name="description" content="الموقع الرسمي لـ URUK SOFT - تطوير تطبيقات أندرويد والحلول البرمجية بواسطة مرتضى حسين.">
+    <meta property="og:title" content="URUK SOFT | مرتضى حسين">
+    <meta property="og:description" content="تطوير حلول برمجية تُحدث فرقًا حقيقيًا في عالم التكنولوجيا">
+    
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
+    <!-- مؤشر الماوس المخصص -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- شريط تقدم التمرير -->
+    <div class="scroll-progress-bar" id="scrollProgress"></div>
+
     <!-- Preloader -->
     <div class="preloader">
         <div class="spinner"></div>
@@ -21,14 +32,20 @@
             <h1>URUK SOFT <span>أوروك سوفت</span></h1>
         </div>
         <ul class="nav-links">
-            <li><a href="#home" class="nav-link animate__animated animate__fadeIn">الرئيسية</a></li>
-            <li><a href="#about" class="nav-link animate__animated animate__fadeIn animate__delay-1s">من نحن</a></li>
-            <li><a href="#services" class="nav-link animate__animated animate__fadeIn animate__delay-2s">الخدمات</a></li>
-            <li><a href="#portfolio" class="nav-link animate__animated animate__fadeIn animate__delay-3s">أعمالنا</a></li>
-            <li><a href="#contact" class="nav-link animate__animated animate__fadeIn animate__delay-4s">تواصل</a></li>
+            <li><a href="#home" class="nav-link">الرئيسية</a></li>
+            <li><a href="#bio" class="nav-link">الملف الشخصي</a></li>
+            <li><a href="#about" class="nav-link">من نحن</a></li>
+            <li><a href="#services" class="nav-link">الخدمات</a></li>
+            <li><a href="#portfolio" class="nav-link">أعمالنا</a></li>
+            <li><a href="#contact" class="nav-link">تواصل</a></li>
         </ul>
-        <div class="burger">
-            <i class="fas fa-bars"></i>
+        <div class="nav-actions">
+            <button id="theme-toggle" class="theme-btn" title="تبديل المظهر">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="burger">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
     </nav>
 
@@ -37,7 +54,9 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="animate__animated animate__fadeInDown">From Code to Impact <span class="animate__animated animate__fadeIn animate__delay-1s">من الكود إلى التأثير</span></h1>
-            <p class="hero-subtitle animate__animated animate__fadeIn animate__delay-2s">تطوير حلول برمجية تُحدث فرقًا حقيقيًا في عالم التكنولوجيا</p>
+            <p class="hero-subtitle animate__animated animate__fadeIn animate__delay-2s">
+                متخصص في <span id="typed-text" class="typed-text"></span><span class="cursor">&nbsp;</span>
+            </p>
             <div class="hero-buttons">
                 <a href="#portfolio" class="cta-button primary-btn animate__animated animate__fadeInUp animate__delay-3s">
                     <i class="fas fa-eye"></i> استعرض أعمالنا
@@ -50,6 +69,49 @@
         <img src="https://static.vecteezy.com/system/resources/previews/026/423/787/non_2x/abstract-technology-background-with-circuit-board-and-blue-lights-digital-communication-line-concept-graphic-hardware-computer-tech-integrated-energy-design-information-internet-generative-ai-photo.jpg" alt="خلفية تقنية" class="hero-image" loading="lazy">
     </section>
 
+    <!-- قسم السيرة الذاتية -->
+    <section id="bio" class="personal-bio">
+        <div class="bio-container animate__animated animate__fadeIn">
+            <div class="bio-card">
+                <div class="bio-avatar-wrapper">
+                    <img src="https://b.top4top.io/p_38695kaew1.png" alt="مرتضى حسين" class="bio-avatar">
+                    <span class="online-badge" title="متاح للعمل والتطوير"></span>
+                </div>
+                <div class="bio-details">
+                    <span class="bio-badge">المؤسس والمطور الرئيسي</span>
+                    <h2>مرتضى حسين</h2>
+                    <p class="bio-summary">
+                        معلم جامعي باختصاص التربية الفنية، من مواليد 1995 (النجف الأشرف، العراق). أحمل شغفاً استثنائياً بعالم البرمجيات والتكنولوجيا منذ عام 2010. جمعت بين الحس الفني والجمالي وتطوير الويب، وصقلت مهاراتي عبر الدورات البرمجية المكثفة لتحويل الأفكار الرقمية إلى مشاريع واعدة، مع اهتمامات واسعة بالعمل التطوعي والخيري لتسخير التقنية في خدمة المجتمع.
+                    </p>
+                    
+                    <div class="bio-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">+4</span>
+                            <span class="stat-label">مشاريع رئيسية</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">Web Dev</span>
+                            <span class="stat-label">التخصص الأساسي</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">حلول مخصصة</span>
+                        </div>
+                    </div>
+
+                    <div class="bio-actions">
+                        <a href="https://t.me/murtada2015" target="_blank" class="bio-btn active">
+                            <i class="fab fa-telegram-plane"></i> تواصل مباشر
+                        </a>
+                        <a href="#portfolio" class="bio-btn outline">
+                            <i class="fas fa-briefcase"></i> أعمالي المنجزة
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- من نحن -->
     <section id="about" class="about">
         <div class="about-content">
@@ -57,53 +119,64 @@
             <div class="about-grid">
                 <div class="about-text animate__animated animate__fadeInLeft">
                     <h3>مرحبا اني <span>مرتضى حسين</span></h3>
-                    <p>أني مرتضى حسين، مؤسس URUK SOFT، مشروع منزلي للتطوير والبرمجة وصناعة الحلول التقنية المبتكرة لتسهيل حياة المستخدمين من خلال تطبيقات وبرمجيات متقدمة.</p>
+                    <p>أني مرتضى حسين، مؤسس URUK SOFT، مشروع لتطوير البرمجيات وصناعة الحلول التقنية المبتكرة، يسعى لدمج اللمسة الفنية بالأداء البرمجي العالي لتسهيل وتطوير تجربة المستخدم.</p>
                     <div class="skills">
-                        <span class="animate__animated animate__fadeInUp">تطوير الأندرويد</span>
-                        <span class="animate__animated animate__fadeInUp animate__delay-1s">برمجة الويب</span>
+                        <span class="animate__animated animate__fadeInUp">تطوير الويب</span>
+                        <span class="animate__animated animate__fadeInUp animate__delay-1s">تطبيقات الأندرويد</span>
                         <span class="animate__animated animate__fadeInUp animate__delay-2s">الحلول المخصصة</span>
                     </div>
                 </div>
-                <div class="about-image animate__animated animate__fadeInRight">
-                    <img src="https://g.top4top.io/p_3490b8srd2.png" alt="مرتضى حسين" class="profile-img">
+                <div class="about-image animate__animated animate__fadeInRight" style="display: flex; justify-content: center; align-items: center;">
+                    <dotlottie-wc src="https://lottie.host/003eaeab-1f73-4b24-9730-ece26ca44849/pI8XlkZZ95.lottie" style="width: 100%; max-width: 380px; height: auto;" autoplay loop></dotlottie-wc>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- الخدمات -->
+    <!-- الخدمات (مُعدّل: تبديل أنيميشن الأندرويد والويب) -->
     <section id="services" class="services">
         <h2 class="animate__animated animate__fadeIn">OUR SERVICES <small class="animate__animated animate__fadeIn animate__delay-1s">خدماتنا</small></h2>
         <div class="services-grid">
+            <!-- تطوير الويب (تم تغيير الأنيميشن إلى الأندرويد بناءً على طلبك) -->
             <div class="service-card animate__animated animate__fadeInUp">
-                <div class="service-icon">
-                    <i class="fas fa-mobile-alt"></i>
-                </div>
-                <h3>تطبيقات أندرويد</h3>
-                <p>بناء تطبيقات بأداء عالي وتصميم جذاب.</p>
-            </div>
-            <div class="service-card animate__animated animate__fadeInUp animate__delay-1s">
-                <div class="service-icon">
-                    <i class="fas fa-code"></i>
+                <div class="service-lottie">
+                    <dotlottie-wc src="https://lottie.host/e9a14646-b511-45ab-ae6d-f8e6eaed1521/FBkI7c9lwV.lottie" autoplay loop></dotlottie-wc>
                 </div>
                 <h3>تطوير الويب</h3>
-                <p>تصميم مواقع تفاعلية وسريعة بتقنيات حديثة.</p>
+                <p>تصميم مواقع تفاعلية، وسريعة بتقنيات استجابة حديثة.</p>
             </div>
+            <!-- تطبيقات أندرويد (تم تغيير الأنيميشن إلى الويب بناءً على طلبك) -->
+            <div class="service-card animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="service-lottie">
+                    <dotlottie-wc src="https://lottie.host/8cb7eb5f-c3e0-4925-b3e4-172f4030c3a1/WUtO3wFog3.lottie" autoplay loop></dotlottie-wc>
+                </div>
+                <h3>تطبيقات أندرويد</h3>
+                <p>بناء تطبيقات بأداء عالٍ وتصميم جذاب واجهات مستخدم متقدمة.</p>
+            </div>
+            <!-- حلول مخصصة -->
             <div class="service-card animate__animated animate__fadeInUp animate__delay-2s">
-                <div class="service-icon">
-                    <i class="fas fa-cogs"></i>
+                <div class="service-lottie">
+                    <dotlottie-wc src="https://lottie.host/436d5fbb-5720-4b05-8cf0-188657795f89/AkctOq9lEH.lottie" autoplay loop></dotlottie-wc>
                 </div>
                 <h3>حلول مخصصة</h3>
-                <p>أنظمة برمجية مصممة خصيصًا لاحتياجات عملك.</p>
+                <p>أنظمة برمجية مصممة خصيصًا لتلبي احتياجات عملك التقنية.</p>
             </div>
         </div>
     </section>
 
-    <!-- أعمالنا -->
+    <!-- أعمالنا (إرجاع طريقة العرض القديمة بالصور + Uruk TV) -->
     <section id="portfolio" class="portfolio">
         <h2 class="animate__animated animate__fadeIn">OUR WORK <small class="animate__animated animate__fadeIn animate__delay-1s">أعمالنا</small></h2>
+        
+        <div class="portfolio-filter animate__animated animate__fadeIn">
+            <button class="filter-btn active" data-filter="all">الكل</button>
+            <button class="filter-btn" data-filter="android">أندرويد</button>
+            <button class="filter-btn" data-filter="web">مواقع ويب</button>
+        </div>
+
         <div class="portfolio-grid">
-            <div class="portfolio-item animate__animated animate__fadeInUp">
+            <!-- Uruk TV -->
+            <div class="portfolio-item android animate__animated animate__fadeInUp">
                 <div class="portfolio-img-container">
                     <img src="https://b.top4top.io/p_34905cgb22.jpg" alt="Uruk TV" class="project-img">
                 </div>
@@ -115,26 +188,41 @@
                     </a>
                 </div>
             </div>
-            <div class="portfolio-item animate__animated animate__fadeInUp animate__delay-1s">
+            <!-- منصة الطف -->
+            <div class="portfolio-item web animate__animated animate__fadeInUp animate__delay-1s">
                 <div class="portfolio-img-container">
-                    <img src="https://via.placeholder.com/600x400" alt="موقع أوروك سوفت" class="project-img">
+                    <img src="https://via.placeholder.com/600x400/2c3e50/ffffff?text=Al-Taff+School" alt="منصة الطف التعليمية" class="project-img">
                 </div>
                 <div class="portfolio-details">
-                    <h3>موقع أوروك سوفت</h3>
-                    <p>الموقع الرسمي للشركة</p>
-                    <a href="https://uruksoft.github.io/uruksoft/" class="view-btn" target="_blank">
+                    <h3>منصة الطف التعليمية</h3>
+                    <p>منصة إلكترونية متكاملة للإدارة التعليمية</p>
+                    <a href="https://uruksoft.github.io/Al-Taff-Primary-School/home.html" class="view-btn" target="_blank">
                         <i class="fas fa-external-link-alt"></i> زيارة الموقع
                     </a>
                 </div>
             </div>
-            <div class="portfolio-item animate__animated animate__fadeInUp animate__delay-2s">
+            <!-- منصة H-K -->
+            <div class="portfolio-item web animate__animated animate__fadeInUp animate__delay-2s">
                 <div class="portfolio-img-container">
-                    <img src="https://a.top4top.io/p_3490y9zvd1.png" alt="موكب أنصار العقيلة" class="project-img">
+                    <img src="https://via.placeholder.com/600x400/3498db/ffffff?text=H-K+Platform" alt="منصة H-K" class="project-img">
                 </div>
                 <div class="portfolio-details">
-                    <h3>موكب أنصار العقيلة</h3>
-                    <p>منصة إدارة المواكب الدينية</p>
-                    <a href="https://uruksoft.github.io/Ansar-Al-Aqila/" class="view-btn" target="_blank">
+                    <h3>منصة H-K</h3>
+                    <p>منصة تفاعلية مخصصة للحلول والأنظمة البرمجية</p>
+                    <a href="https://uruksoft.github.io/H-K.com/" class="view-btn" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> زيارة الموقع
+                    </a>
+                </div>
+            </div>
+            <!-- موقع Garden -->
+            <div class="portfolio-item web animate__animated animate__fadeInUp animate__delay-3s">
+                <div class="portfolio-img-container">
+                    <img src="https://via.placeholder.com/600x400/2ecc71/ffffff?text=Garden+Website" alt="موقع Garden" class="project-img">
+                </div>
+                <div class="portfolio-details">
+                    <h3>موقع Garden</h3>
+                    <p>تصميم ويب عصري ومستجيب بالكامل</p>
+                    <a href="https://uruksoft.github.io/Garden/" class="view-btn" target="_blank">
                         <i class="fas fa-external-link-alt"></i> زيارة الموقع
                     </a>
                 </div>
@@ -164,8 +252,6 @@
                     <span>Telegram</span>
                 </a>
             </div>
-            
-            </div>
         </div>
     </section>
 
@@ -178,17 +264,32 @@
             </div>
             <div class="footer-links animate__animated animate__fadeIn animate__delay-1s">
                 <a href="#home">الرئيسية</a>
+                <a href="#bio">الملف الشخصي</a>
                 <a href="#services">الخدمات</a>
                 <a href="#portfolio">الأعمال</a>
                 <a href="#contact">التواصل</a>
             </div>
         </div>
         <div class="copyright animate__animated animate__fadeIn animate__delay-2s">
-            <p>© <span id="year"></span> URUK SOFT. جميع الحقوق محفوظة</p>
-            <p>تم التطوير بواسطة <span>مرتضى حسين</span></p>
+            <p>© <span id="year"></span> URUK SOFT. جميع الحقوق محفوظة | تم التطوير بواسطة <span>مرتضى حسين</span></p>
         </div>
     </footer>
 
+    <!-- زر العودة للأعلى -->
+    <button id="backToTop" class="back-to-top" title="العودة للأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- نافذة تفاصيل المشروع (Modal) -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modalDetails"></div>
+        </div>
+    </div>
+
+    <!-- سكربت Lottie Web Component الموحد -->
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.4/dist/dotlottie-wc.js" type="module"></script>
     <script src="script.js"></script>
 </body>
 </html>
